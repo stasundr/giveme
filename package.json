@@ -1,0 +1,23 @@
+{
+  "name": "giveme",
+  "version": "0.1.0",
+  "description": "",
+  "main": "giveme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stasundr/giveme.git"
+  },
+  "author": "Stanislav Dryomov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stasundr/giveme/issues"
+  },
+  "homepage": "https://github.com/stasundr/giveme#readme",
+  "dependencies": {
+    "hiredis": "^0.4.0",
+    "redis": "^0.12.1"
+  }
+}
