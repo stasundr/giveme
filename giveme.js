@@ -1,7 +1,7 @@
 var data = require('./lib/data');
 
-data.loadPopulationGenotypes('Eskimo', function(genotypes) {
-    console.log(genotypes.length);
+data.loadTwoPopulationsGenotypes('Eskimo', 'LBK', function(genotypes1, genotypes2) {
+    console.log(genotypes1.length + ' ' + genotypes2.length);
 
     process.exit(0);
 });
