@@ -6,7 +6,7 @@ module.exports = {
 
     dataset: 'EuropeFullyPublic:',
 
-    redisHost: process.env.REDIS_HOST || 'localhost',
+    redisHost: process.env.REDIS_HOST || '104.236.194.9',
     redisPort: process.env.REDIS_PORT || 6379,
-    redisAuth: process.env.REDIS_AUTH || null
+    redisAuth: process.env.REDIS_AUTH || 'Ryb0bud5kU6tag4Auc8mUs6jewn7oSh5eg3I6oC0Pi1gluD7wu'
 };
