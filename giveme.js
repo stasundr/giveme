@@ -1,7 +1,6 @@
 var config = require('./config');
 var data = require('./lib/data');
 var jackknife = require('./lib/jackknife');
-var math = require('mathjs');
 
 data.loadThreePopulationsGenotypes(process.argv[2], process.argv[3], process.argv[4], function(genotypes1, genotypes2, genotypes3) {
 
@@ -74,31 +73,7 @@ data.loadThreePopulationsGenotypes(process.argv[2], process.argv[3], process.arg
         size_m.shift();
 
         console.log('f3: ' + f3_t);
-        console.log('sigma2: ' + jackknife.deleteMj(f3_t, freq3.length, f3_m, size_m));
         console.log(f3_t/Math.sqrt(jackknife.deleteMj(f3_t, freq3.length, f3_m, size_m)));
-
-
-        //var tmpf3 = [];
-        //for (var i = 1; i <= 22; i++) {
-        //    tmpf3[i] = f3(chromosomesRange[i][0], chromosomesRange[i][1]);
-        //    console.log(i + ': ' + tmpf3[i]);
-        //}
-        //
-        //tmpf3.shift();
-        //
-        //console.log((f3(0,0) - math.mean(tmpf3))/math.std(tmpf3)*Math.sqrt(22));
-        //
-        ////var E_f3 = f3(0,0); console.log('E: ' + E_f3);
-        ////var mean_tmpf3 = 0;
-        ////var var_tmpf3 = 0;
-        ////tmpf3.forEach(function(v) { mean_tmpf3 += v });
-        ////mean_tmpf3 /= 22;
-        ////tmpf3.forEach(function(v) { var_tmpf3 += (mean_tmpf3 - v) * (mean_tmpf3 - v) });
-        ////var_tmpf3 /= 22;
-        ////
-        ////var z = (mean_tmpf3 - E_f3)/(Math.sqrt(var_tmpf3/22));
-        ////
-        ////console.log(z);
 
         process.exit(0);
     });
