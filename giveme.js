@@ -1,4 +1,3 @@
-var config = require('./config');
 var data = require('./lib/data');
 var jackknife = require('./lib/jackknife');
 
@@ -72,8 +71,8 @@ data.loadThreePopulationsGenotypes(process.argv[2], process.argv[3], process.arg
         f3_m.shift();
         size_m.shift();
 
-        console.log('f3: ' + f3_t);
-        console.log(f3_t/Math.sqrt(jackknife.deleteMj(f3_t, freq3.length, f3_m, size_m)));
+        console.log(process.argv[2] + ' ' + process.argv[3] + ' ' + process.argv[4] + ' '
+            + f3_t + ' ' + f3_t/Math.sqrt(jackknife.deleteMj(f3_t, freq3.length, f3_m, size_m)));
 
         process.exit(0);
     });

@@ -5,6 +5,7 @@ module.exports = {
     geno: '/Users/stasundr/Desktop/1240k_HO.geno',
 
     dataset: 'EuropeFullyPublic:',
+    //dataset: 'V822_1240k_HO:',
 
     redisHost: process.env.REDIS_HOST || '104.236.194.9',
     redisPort: process.env.REDIS_PORT || 6379,
