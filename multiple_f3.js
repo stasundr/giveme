@@ -59,7 +59,7 @@ var task = [
     ['Esan', 'LBK', 'Yemenite_Jew']
 ];
 
-while (task.size < 100) task.push(task[Math.floor(Math.random()*55)]);
+while (task.length < 100) task.push(task[Math.floor(Math.random()*55)]);
 
 var queue = 0;
 var maxQueueSize = 6;
